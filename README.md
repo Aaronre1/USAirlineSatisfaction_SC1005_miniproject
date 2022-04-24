@@ -53,13 +53,13 @@ We shall split them into the following subcategories.
 #### Passenger Variables
 Variables relating to the passenger.
 
-**Categorical** : 
+Categorical : 
 [`Class`](README.md/#class-ea)
 [`Type of Travel`](README.md/#type-of-travel-ea)
 [`Customer Type`](README.md/#customer-type-ea)
 [`Gender`](README.md/#gender-ea)
 
-**Numeric** : [`Age`](README.md/#age-ea)  
+Numeric : [`Age`](README.md/#age-ea)  
 
 ##### Categorical
 <a id="class-ea"></a>
@@ -100,12 +100,6 @@ Analyse the relation with Age + Gender, we observe that the graphs are fairly si
 ---
 #### Service Variables
 For our problem case, we will be focusing mainly on services on board the plane and not on online services.
-We observed that there are 6 unique values from 0 to 5.  
-All of which are *rating* type variables.
-
-We observed that generally, ratings 5 and 6 have higher statisfaction rate. 
-But more notably, `Seat comfort` `Food and drink` `Inflight entertainment` seems to have strong relation to satisfaction.
-Specifically speaking, ratings 5 and 6 have higher statisfaction rate and additionally ratings 3 and 4 have higher neutral/distatisfaction rate.
 
 **Focus**:
 `Seat comfort` 
@@ -120,7 +114,21 @@ Specifically speaking, ratings 5 and 6 have higher statisfaction rate and additi
 **Non-Focus**:
 `Online support` 
 `Ease of Online booking` 
-`Online boarding`
+`Online boarding`  
+
+We observed that there are 6 unique values from 0 to 5.  
+All of which are *rating* type variables.
+
+We observed that generally, ratings 4 and 5 have higher statisfaction rate. 
+But more notably, `Seat comfort` `Food and drink` `Inflight entertainment` seems to have strong relation to satisfaction.
+Specifically speaking, ratings 4 and 5 have higher statisfaction rate and additionally ratings 2 and 3 have higher neutral/distatisfaction rate.
+
+
+![download](https://user-images.githubusercontent.com/65995623/164957502-f6b9bddb-84be-4d17-aa4c-6e3a869141b2.png)
+![download](https://user-images.githubusercontent.com/65995623/164957507-46f572ed-057d-4176-a91f-5c9c3cdfbe57.png)
+![download](https://user-images.githubusercontent.com/65995623/164957510-d7761238-9f32-44b2-9c0f-e64eb632c109.png)
+
+
 
 ---
 #### Other Variables
@@ -180,6 +188,10 @@ Generally, longer delays have higher neutral/disatisfaction rate.
 
 ## Models
 We create models for `satisfaction_v2` with different attempts/methods.
+For our problem case, we focus on our service variables:  
+> `Seat comfort` `Food and drink` `Inflight wifi service` `Inflight entertainment`
+> `On-board service` `Leg room service` `Checkin service` `Cleanliness`
+
 ### Attempt 1 - Multi-Variate Classification Tree 1
 ### Attempt 2 - Multi-Variate Classification Tree 2
 ### Attempt 3 - Random Forest 1
@@ -188,7 +200,8 @@ We create models for `satisfaction_v2` with different attempts/methods.
 
 #### Receiver Operating Characteristic(ROC) Curve
 
-A plot for the true positive rate against the false positive rate.
+A plot for the true positive rate against the false positive rate.  
+![download](https://user-images.githubusercontent.com/65995623/164957453-ed60ec33-1374-4407-87f2-ecd6396cada4.png)
 
 AUC score of ~0.87. Consider good. As 1 represents perfect classifier and 0.5 represents a worthless classifier.
 
@@ -208,3 +221,16 @@ AUC score of ~0.87. Consider good. As 1 represents perfect classifier and 0.5 re
 From the models created above, we can conclude that the models created using Random Forest performs better.
 
 As it has a higher accuracy rate, true positive rate and true negative rate. Also with lower false positive rate & false negative rate.
+
+### Take-Aways
+From our analysis, we can see that certain services are more important to the passengers.  
+Airlines can choose to targest such key services to improve thier passengers satisfaction ratings.  
+From our models, we can predict if an airline can provide satisfactory services.  
+
+## Referencences
+__[US Airline passenger satisfaction survey](https://www.kaggle.com/datasets/najibmh/us-airline-passenger-satisfaction-survey?resource=download)__
+
+## Contributors
+- Aaron Yong
+- Chen Jian
+- Chen Bin
