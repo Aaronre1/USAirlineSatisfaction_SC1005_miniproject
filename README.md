@@ -230,6 +230,8 @@ From our models, we can predict if an airline can provide satisfactory services.
 
 ## Referencences
 __[US Airline passenger satisfaction survey](https://www.kaggle.com/datasets/najibmh/us-airline-passenger-satisfaction-survey?resource=download)__
+__[Logistic Regresstion Tutorial](https://www.datacamp.com/community/tutorials/understanding-logistic-regression-python)__
+
 
 ## Contributors
 - Aaron Yong
