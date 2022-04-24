@@ -7,6 +7,7 @@ In this Project, we would like to peform some analysis on a dataset of __[US Air
 - [Data Preparation](README.md/#data-preparation)
 - [Exploratory Analysis](README.md/#exploratory-analysis)
 - [Models](README.md/#models)
+- [Conclusion](README.md/#conclusion)
 
 ## Problem
 Based on passenger ratings, we would like to find out how the different indivudal ratings affect the passenger's final decision for a _satisfied_ or _unsatisfied_ with the service provided by US Airline.
