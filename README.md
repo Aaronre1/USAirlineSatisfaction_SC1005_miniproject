@@ -189,12 +189,14 @@ Generally, longer delays have higher neutral/disatisfaction rate.
 
 ## Models
 We create models for `satisfaction_v2` with different attempts/methods.
-For our problem case, we focus on our service variables:  
-> `Seat comfort` `Food and drink` `Inflight wifi service` `Inflight entertainment`
-> `On-board service` `Leg room service` `Checkin service` `Cleanliness`
+For our problem case, we focus on our variables:  
+> service: `Seat comfort` `Food and drink` `Inflight wifi service` `Inflight entertainment`
+> `On-board service` `Leg room service` `Checkin service` `Cleanliness`  
+> passenger: `Class`
 
 ### Attempt 1 - Multi-Variate Classification Tree 1
 ### Attempt 2 - Multi-Variate Classification Tree 2
+Experiment with resampling and balancing the dataset.
 ### Attempt 3 - Random Forest 1
 ### Attempt 4 - Random Forest 2
 ### Attempt 5 - Logistic Regression
