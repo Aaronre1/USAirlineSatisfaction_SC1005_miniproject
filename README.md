@@ -137,7 +137,14 @@ Other variables that are not related to customer or airline service.
 
 
 ##### Categorical
-We observed that there are 6 unique values from 0 to 5 and are *rating* type variables.  
+We observed that there are 6 unique values from 0 to 5 and are *rating* type variables. 
+**Distribution**  
+`Gate location`: Rating 3 has highest frequency.  
+`Departure/Arrival time convenient` and `Baggage handling` : Rating 4 has highest frequency.
+
+**Relation**  
+No clear relation for `Gate location` and `Departure/Arrival time convenient`.  
+But rating `4` `5` for `Baggage handling` have higher satisfaction rate.
 
 <a id="gate-location-ea"></a>
 ###### Gate Location
@@ -172,3 +179,32 @@ Generally, longer delays have higher neutral/disatisfaction rate.
 
 
 ## Models
+We create models for `satisfaction_v2` with different attempts/methods.
+### Attempt 1 - Multi-Variate Classification Tree 1
+### Attempt 2 - Multi-Variate Classification Tree 2
+### Attempt 3 - Random Forest 1
+### Attempt 4 - Random Forest 2
+### Attempt 5 - Logistic Regression
+
+#### Receiver Operating Characteristic(ROC) Curve
+
+A plot for the true positive rate against the false positive rate.
+
+AUC score of ~0.87. Consider good. As 1 represents perfect classifier and 0.5 represents a worthless classifier.
+
+## Conclusion
+| # | Attempt 1 | Attempt 2 | Attempt 3 | Attempt 4 |
+| --- | --- | --- | --- | --- |
+| Accuracy | 0.8451936402833384 | 0.8538144348024864 | 0.9153324717115501 | 0.9151830067083411 | 
+| TPR | 0.9337160567745572 | 0.8171225402189601 | 0.9028916171245647 | 0.9034345357734758 |
+| TNR | 0.7385075767222717 | 0.8904347826086957 | 0.9277665465412674 | 0.9268690482453833 | 
+| FPR | 0.26149242327772826 | 0.10956521739130434 | 0.07223345345873253 | 0.07313095175461672 | 
+| FNR | 0.06628394322544288 | 0.1828774597810399 | 0.09710838287543533 | 0.0965654642265242 | 
+
+- Attempt 1 & 2 => Multi-Variate Classification Tree
+- Attempt 3 & 4 => Random Forest
+- Attempt 5 => Logistic Regression
+
+From the models created above, we can conclude that the models created using Random Forest performs better.
+
+As it has a higher accuracy rate, true positive rate and true negative rate. Also with lower false positive rate & false negative rate.
